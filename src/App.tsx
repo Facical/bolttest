@@ -133,6 +133,15 @@ export default function App() {
         <p className="mt-4 text-center text-xs text-gray-400">
           입력하신 정보는 이벤트 운영 목적으로만 사용됩니다.
         </p>
+
+        <div className="mt-6 text-center">
+          <a
+            href="/hello"
+            className="text-sm font-semibold text-black underline underline-offset-4 decoration-2 hover:bg-black hover:text-white hover:no-underline px-1.5 py-0.5 rounded transition-colors"
+          >
+            hello 페이지로 이동 →
+          </a>
+        </div>
       </div>
     </div>
   );
