@@ -1,3 +1,5 @@
+import { href } from '@/lib/basePath';
+
 export default function Hello() {
   return (
     <div className="min-h-screen bg-white flex flex-col items-center justify-center px-4">
@@ -8,7 +10,7 @@ export default function Hello() {
 
       <div className="mt-6 text-center">
         <a
-          href="/"
+          href={href('/')}
           className="text-sm font-semibold text-black underline underline-offset-4 decoration-2 hover:bg-black hover:text-white hover:no-underline px-1.5 py-0.5 rounded transition-colors"
         >
           ← 이벤트 신청서로 돌아가기

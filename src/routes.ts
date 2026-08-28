@@ -1,4 +1,5 @@
 import { lazy } from 'react';
+import { currentPath } from '@/lib/basePath';
 
 /**
  * This project has no router, so pages are resolved from the current path.
@@ -9,6 +10,6 @@ const routes = {
   '/hello': () => import('@/pages/Hello'),
 } as const;
 
-const load = routes[window.location.pathname as keyof typeof routes] ?? (() => import('@/App'));
+const load = routes[currentPath() as keyof typeof routes] ?? (() => import('@/App'));
 
 export const CurrentPage = lazy(load);
