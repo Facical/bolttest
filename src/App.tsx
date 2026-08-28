@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { supabase } from '@/lib/supabase';
+import { href } from '@/lib/basePath';
 
 type Status = 'idle' | 'submitting' | 'success' | 'error';
 
@@ -136,7 +137,7 @@ export default function App() {
 
         <div className="mt-6 text-center">
           <a
-            href="/hello"
+            href={href('/hello')}
             className="text-sm font-semibold text-black underline underline-offset-4 decoration-2 hover:bg-black hover:text-white hover:no-underline px-1.5 py-0.5 rounded transition-colors"
           >
             hello 페이지로 이동 →
